@@ -1,0 +1,10 @@
+*.beam
+*.ez
+/build
+erl_crash.dump
+
+# Exclude generated files
+/priv/static/client.js
+/priv/static/index.html
+
+

@@ -1,0 +1,13 @@
+services:
+  server:
+    build:
+      context: containers
+      dockerfile: Containerfile
+      args:
+        GLEAM_VERSION: 1.17.0
+        NODE_VERSION: 26.7.0
+    command: /app/containers/runas-wrapper.sh /app/containers/start.sh
+    ports:
+      - 8100:8100
+    volumes:
+      - .:/app
